@@ -16,7 +16,6 @@ int main()
         in >> in_i;
         arr1[i] = stoi(in_i);
     }
-    
     in >> in_j;
     int arr_j = stoi(in_j);
     int* arr2 = new int[arr_j];
@@ -27,9 +26,9 @@ int main()
     }
     in >> in_j;
     arr2[0] = stoi(in_j);
+    in.close();
     std::ofstream out("out.txt");
     out << arr_j << std::endl;
-    
     for (int i = 0; i < arr_j; i++)
     {
         out << arr2[i];
@@ -42,8 +41,6 @@ int main()
         out << arr1[i];
         out << ' ';
     }
-    //Прочитать файл и записать массив циклом без первой цифры 
-
-
-    
+    delete[] arr1;
+    delete[] arr2;
 }
